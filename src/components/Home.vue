@@ -21,6 +21,7 @@
           unique-opened="true"
           :collapse="isCollapse"
           :collapse-transition="false"
+          router
         >
           <!-- 一级菜单 -->
           <el-submenu
@@ -36,7 +37,7 @@
             </template>
             <!-- 二级菜单 -->
             <el-menu-item
-              :index="subItem.id + ''"
+              :index="'/' + subItem.path"
               v-for="subItem in item.children"
               :key="subItem.id"
             >
@@ -47,7 +48,9 @@
         </el-menu>
       </el-aside>
       <!-- 主栏 -->
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -64,7 +67,7 @@ export default {
         102: "iconfont icon-activity",
         145: "iconfont icon-dynamic",
       },
-      isCollapse: "true",
+      isCollapse: false,
     };
   },
   created() {
