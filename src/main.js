@@ -15,6 +15,12 @@ axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.prototype.$http = axios
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  console.log(config)
+  return config
+
+})
 // Vue.prototype.$message = Message
 
 new Vue({

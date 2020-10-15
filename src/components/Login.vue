@@ -50,47 +50,46 @@
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       formInput: {
-        username: 'admin',
-        password: '123456'
+        username: "admin",
+        password: "123456",
       },
       loginFormRules: {
         // 验证用户名是否合法
         username: [
-          { required: true, message: '请输入用户名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 8 个字符', trigger: 'blur' }
+          { required: true, message: "请输入用户名称", trigger: "blur" },
+          { min: 3, max: 5, message: "长度在 3 到 8 个字符", trigger: "blur" },
         ],
         // 验证密码是否合法
         password: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 3, max: 6, message: '长度在 3 到 6 个字符', trigger: 'blur' }
-        ]
-      }
-    }
+          { required: true, message: "请输入密码", trigger: "blur" },
+          { min: 3, max: 6, message: "长度在 3 到 6 个字符", trigger: "blur" },
+        ],
+      },
+    };
   },
   methods: {
     // 重置表单
-    resetForm () {
+    resetForm() {
       //   console.log(this)
-      this.$refs.loginFormRef.resetFields()
+      this.$refs.loginFormRef.resetFields();
     },
     // 表单登录验证
-    loginForm () {
+    loginForm() {
       this.$refs.loginFormRef.validate(async (valid) => {
-        if (!valid) return
-        const { data: res } = await this.$http.post('login', this.formInput)
-        console.log(res)
-        if (res.meta.status !== 200) return this.$message.error('登录失败')
-        this.$message.success('登录成功')
-        window.sessionStorage.setItem('token','res.data.token')
-        this.$router.push('/home')
-
-      })
-    }
-  }
-}
+        if (!valid) return;
+        const { data: res } = await this.$http.post("login", this.formInput);
+        console.log(res);
+        if (res.meta.status !== 200) return this.$message.error("登录失败");
+        this.$message.success(res.meta.msg);
+        window.sessionStorage.setItem("token", res.data.token);
+        this.$router.push("/home");
+      });
+    },
+  },
+};
 </script>>
 <style lang="scss" scoped>
 .login_container {
