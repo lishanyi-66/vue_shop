@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1602573792936'); /* IE9 */
+  src: url('iconfont.eot?t=1602573792936#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAAsAAAAAB7wAAAOFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDJIMNATYCJAMMCwgABCAFhG0HNxvUBlGU6skI2R+gjLEdNCOCBE1mNRRQqhJOLCg2957L187ieduHd+cOj7/BsxYAgAjKMXIvyRNQiSyQqupUVTJIRCVRg0RZx4qFKv81l/9yx1sgYbaoAFExbHLpwSZcBFXWrTDE4xncJ8fy63ODw8wqlDTAyZox4MAG5JgGG/Flh0tLH1keRdkjDgub9gBfiygmYk7qOrgEurKGDThwfqJQ+onLaWMBPrZ+luUyx+SoCzAOKAr3xjZZgQTkDWMXtMTzBGoNisZsKK2uA5vCnBaIgzzXDbaMSWmoDtVCZcXaIu6BWXW6bniNu8H344dlYSOpyMy523eX9EH+57rPe4wTXto8HIinc4BtImMeKMSuStdOxig1z6hWVZmaiysVIU0V9XoJRJqmcqN/vERUMivrwTRMJz77OFyCz9wGCWRQCTI3ATyB5PaHFmnYN9Av1XcYMecTDz633d4of/4m/j5A7ePn/rT+srLp9G0ob7wenqyPafjxLIAM6t8eMZbPAvBCVwC4+AlTXn7x6clDI/yHbihM1G3gUnUvpzDaC2rpvIRv6+NgIH0Yus3/nIaCkjr1bH/8asj/Yut51QbhnPZZyF8RlcrK9iiHzUf8uHdyvm0+1D/J/9xBTE82aLik6vX2tHoJDGdnzg5Mv1TqUJXcq2uHE7Lr19biEFRt1X+U7j97ls5afAcY9FcexYB/fpzc3CzGfX/G/ICf2PL9y/v6mtcVMHVUqDPVmjyAqWPqgVpjnXEwdAH8l5/lczjTfMKY9/9+4/7Pn+sMyP5vqyvg7ab2CQb/K7pbVN+dO/hb4o5NRZOa5lwUkSMy3NnWVJGEWk3tH9VCq6/DNR2dKwnVOhIwqTIAZtXG8YU8D1aosyJcqdrRKqk1pwxurtNGYhSlBrNmARia7YJJo6dg1uwBX8hfwAqd/oGVmsMI1toRIXvWmQweFUmkWyF9uGcQ873Uw9pWBYXVNYRTXd1SWhrQG4gk81GcQOezZcRDpCkWyBqXqCgsZiXqxqXgMuJyUSxItJ/0KrEORREy49SqN8X2Ujcg60mIbgqiD9ZjEMbrRXmwXnsFKny+BsFRuXSTGhqqvA0IiYzvHksQK74Dvkzl6dRwK9fINJxECgULY0koN6wUOAiXlaIwoXpUP6KXIpZjQEKQKQ61YruqYpfXuN9vB9Qyj8yRIkdRDvHubssg9XAOFQAAAAA=') format('woff2'),
+  url('iconfont.woff?t=1602573792936') format('woff'),
+  url('iconfont.ttf?t=1602573792936') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1602573792936#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mima:before {
+  content: "\e60b";
+}
+
+.icon-yonghu:before {
+  content: "\e667";
+}
+
