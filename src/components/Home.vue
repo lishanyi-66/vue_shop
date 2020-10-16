@@ -13,12 +13,12 @@
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class="zoombutton" @click="toggleCollapse()">|||</div>
         <el-menu
-          default-active="2"
+          :default-active="activePath"
           class="el-menu-vertical-demo"
           background-color="#d44e4e"
           text-color="#fff"
-          active-text-color="#fff"
-          unique-opened="true"
+          active-text-color="#000"
+          :unique-opened="true"
           :collapse="isCollapse"
           :collapse-transition="false"
           router
@@ -40,6 +40,7 @@
               :index="'/' + subItem.path"
               v-for="subItem in item.children"
               :key="subItem.id"
+              @click="saveNavState('/' + subItem.path)"
             >
               <i class="iconfont icon-manage"></i>
               {{ subItem.authName }}
@@ -68,10 +69,12 @@ export default {
         145: "iconfont icon-dynamic",
       },
       isCollapse: false,
+      activePath: "",
     };
   },
   created() {
     this.getMenuList();
+    this.activePath = window.sessionStorage.getItem("activePath");
   },
 
   methods: {
@@ -82,12 +85,16 @@ export default {
     //获取所有菜单
     async getMenuList() {
       const { data: res } = await this.$http.get("menus");
-      console.log(res);
+      // console.log(res);
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg);
       this.menuList = res.data;
     },
     toggleCollapse() {
       this.isCollapse = !this.isCollapse;
+    },
+    saveNavState(activePath) {
+      window.sessionStorage.setItem("activePath", activePath);
+      this.activePath = activePath;
     },
   },
 };
