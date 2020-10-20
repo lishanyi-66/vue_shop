@@ -1,3 +1,6 @@
 <template>
   <div>welcome</div>
-</template>>
+</template>
+<script>
+export default {};
+</script>
