@@ -13,6 +13,7 @@ import './assets/css/global.css'
 import './assets/iconfont/iconfont.css'
 import axios from 'axios'
 import VueQuillEditor from 'vue-quill-editor'
+import echarts from "echarts"
 // require styles
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
